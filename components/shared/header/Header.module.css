@@ -1,0 +1,162 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 100px;
+  padding: 24px 150px;
+  color: rgba(24, 24, 27, 1);
+  font:
+    400 16px/2 Poppins,
+    sans-serif;
+
+  max-width: 1800px;
+  margin: auto;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.drawerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 30px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.logoLink {
+  z-index: 100;
+}
+
+.logo {
+  aspect-ratio: 4.52;
+  object-fit: contain;
+  object-position: center;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.navigationContainer {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 40px 41px;
+  justify-content: start;
+  width: 410px;
+  margin: auto 0;
+}
+
+.navLinks {
+  border-radius: 0;
+  align-self: center;
+  display: flex;
+  min-width: 240px;
+  width: 410px;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.loginButton {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  gap: 5px;
+  color: var(--gray-900, #18181b);
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .loginButton {
+    white-space: initial;
+  }
+}
+
+.loginIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 14px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.loginText {
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.tryFreeButton {
+  align-self: stretch;
+  border-radius: 5px;
+  background-color: rgba(114, 97, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  padding: 8px 20px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px;
+
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    cursor: pointer;
+    color: black;
+  }
+
+  .navigationContainer {
+    justify-content: flex-end;
+    min-width: auto;
+  }
+}
+
+.drawerMenuNavLink {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #18181b;
+  text-align: left;
+  cursor: pointer;
+}
+
+.drawerMenuNavLink:hover {
+  border-bottom: 2px solid rgba(114, 97, 255, 1);
+}
+
+.drawerMenu .tryFreeButton {
+  margin-top: 20px;
+}
